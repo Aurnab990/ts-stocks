@@ -7,8 +7,18 @@ const Navbar = () => {
     const navbar =[<>
                         <Link to={'/'}><li className='font-semibold'><a>Home</a></li></Link>
                         <Link to={'product'}><li className='font-semibold'><a>Products</a></li></Link>
-                        <li className='font-semibold'><a>Contact</a></li>
-                        <li className='font-semibold'><a>About</a></li>
+                        {
+                            user?
+                            <Link to={'/additems'}><li className='font-semibold'><a>Add items</a></li></Link>
+                            :
+                            <li className='font-semibold'><a>About</a></li>
+                        }
+                        {
+                            user?
+                            <Link to={'/myitems'}><li className='font-semibold'><a>My Items</a></li></Link>
+                            :
+                            <li className='font-semibold'><a>Contact</a></li>
+                        }
                         <Link to={'login'}><li className='font-semibold'><a>
                         {
                                 user?.uid

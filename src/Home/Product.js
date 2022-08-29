@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Details from '../Details';
+import useFirebase from '../useFirebase';
 
 const Product = () => {
     const [product, setProduct] = useState([]);
+    const {user} = useFirebase();
     useEffect(() => {
         fetch('Product.json')
             .then(res => res.json())
@@ -25,12 +29,20 @@ const Product = () => {
                             <div class="card-actions justify-end">
                             
                                 <div class="badge badge-outline">Fashion</div>
+                                <div class="badge badge-outline">Stocks: {products.stocks}</div>
                                 <div class="badge badge-outline">${products.price}</div>
-                                <div className='  btn btn-secondary w-full text-center'>BUY NOW</div>
+                                {
+                                    user?
+                                    <Link className='  btn btn-secondary w-full text-center' to={'/product'}>BUY NOW</Link>
+                                    :
+                                    <Link className='  btn btn-secondary w-full text-center' to={'/login'}>BUY NOW</Link>
+                                }
                             </div>
                         </div>
                     </div>
+                    
                 </p>)
+                
             }
         </div>
     );
