@@ -19,14 +19,14 @@ const Details = () => {
                             <h1 class="text-5xl font-bold">{products.name}</h1>
                             <p class="py-6">{products.description}</p>
                             <div class="card-actions justify-start">
-                                <input className='bg-red-400 cursor-pointer border-2 font-bold w-1/5' type='submit' value="-"></input>
-                                <input className='bg-green-400 cursor-pointer border-2 font-bold w-1/5' type='submit' value="+"></input>
+                                <input className='bg-red-500 cursor-pointer border-2 font-bold w-1/5' type='submit' value="-"></input>
+                                <input className='bg-yellow-400 cursor-pointer border-2 font-bold w-1/5' type='submit' value="+"></input>
                                 <div class="badge badge-outline">Stocks: {products.stocks}</div>
                                 <div class="badge badge-outline">${products.price}</div>
                             </div>
                             <div className='grid grid-cols-1 lg: grid-cols-2 gap-10 mt-10'>
-                                <button class="btn btn-primary">Delivered</button>
-                                <div className='  btn btn-secondary text-center'>BUY NOW</div>
+                                <button class="btn bg-orange-400">Delivered</button>
+                                <div className='  btn text-center'>BUY NOW</div>
                             </div>
                         </div>
                     </div>

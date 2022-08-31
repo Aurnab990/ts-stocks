@@ -5,7 +5,7 @@ const Update = () => {
     const { id } = useParams();
     const [user, setUsers] = useState([]);
     useEffect(() => {
-        const url = `https://hore-07149.herokuapp.com/${id}`;
+        const url = `https://localhost:5000/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUsers(data));
@@ -33,9 +33,9 @@ const Update = () => {
         })
             .then(res => res.json())
             .then(data => {
-                /*const newBook = [user, data];
-                setUsers(newBook); */
-                //console.log("Sucess", data);
+                /*const newProduct = [user, data];
+                setUsers(newProduct); 
+                console.log("Sucess", data);*/
                 alert("Update Successfully", data);
                 event.target.reset();
 

@@ -48,7 +48,7 @@ const Myitems = () => {
                             <div className='flex'>
 
                     <button onClick={() => handleDelete(products._id)} className='bg-red-500 p-2 w-4/5 text-white font-bold rounded-xl'>Delete  </button> 
-                    <td className='w-4/5'> <Link to={'/update'}><button  className='bg-green-600 p-2 w-5/6 text-white font-bold rounded-xl'>Update</button></Link> </td>
+                    <td className='w-4/5'> <Link to={`/update/${products._id}`}><button  className='bg-green-600 p-2 w-5/6 text-white font-bold rounded-xl'>Update</button></Link> </td>
                     </div>
                         </div>
                     </div>

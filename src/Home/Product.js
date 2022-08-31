@@ -12,10 +12,10 @@ const Product = () => {
             .then(data => setProduct(data))
     }, [])
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 '>
             {
                 product.map(products => <p>
-                    <div class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card w-80 bg-base-100 shadow-xl hover:p-5">
                         <figure><img src={products.img} alt="Shoes" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">
@@ -33,9 +33,9 @@ const Product = () => {
                                 <div class="badge badge-outline">${products.price}</div>
                                 {
                                     user?
-                                    <Link className='  btn btn-secondary w-full text-center' to={'/product'}>BUY NOW</Link>
+                                    <Link className='  btn  w-full text-center hover:bg-white hover:text-black' to={'/product'}>BUY NOW</Link>
                                     :
-                                    <Link className='  btn btn-secondary w-full text-center' to={'/login'}>BUY NOW</Link>
+                                    <Link className='  btn w-full text-center' to={'/login'}>BUY NOW</Link>
                                 }
                             </div>
                         </div>

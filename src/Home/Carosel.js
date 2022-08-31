@@ -3,7 +3,7 @@ import React from 'react';
 const Carosel = () => {
     return (
         <div>
-            <div class="carousel w-5/6 ml-32 mt10 lg:mt-28">
+            <div class="carousel w-5/6 ml-32 mt-10 lg:mt-24">
                 <div id="item1" class="carousel-item w-full">
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/008/162/856/small/short-sleeve-t-shirt-technical-fashion-flat-sketch-illustration-navy-blue-color-template-free-vector.jpg" class="w-full" />
                 </div>

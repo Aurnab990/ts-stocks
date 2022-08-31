@@ -19,7 +19,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/additems' element={<Addiems></Addiems>}></Route>
-        <Route path='/update' element={<Update></Update>}></Route>
+        <Route path='/update/:id' element={<Update></Update>}></Route>
         <Route path='/myitems' element={<Myitems></Myitems>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>

@@ -29,24 +29,25 @@ const Addiems = () => {
     });
 }
     return (
-        <div className='w-1/3 justify-center ml-10 lg:ml-96 mt-10 lg:mt-24'>
-            <form onSubmit={handleUser}>
-                <input className='border-2 w-full p-2' type="test" name='name' placeholder='tshirt name' required></input>
+        <div className='w-1/3 justify-center ml-10 lg:ml-96 mt-10 '>
+            <h1 className='text-3xl font-semibold ml-10'>Add Your <span className='text-yellow-400 mb-10'>Product</span></h1>
+            <form className='mt-10' onSubmit={handleUser}>
+                <input className='border-2 w-full p-2 input input-bordered input-md w-full max-w-xs' type="test" name='name' placeholder='tshirt name' required></input>
                 <br></br>
                 <br></br>
-                <input className='border-2 w-full p-2' type="text" name='price' placeholder='price' required></input>
+                <input className='border-2 w-full p-2 input input-bordered input-md w-full max-w-xs' type="text" name='price' placeholder='price' required></input>
                 <br></br>
                 <br></br>
-                <input className='border-2 w-full p-2' type="text" name='quantity' placeholder='quantity' required></input>
+                <input className='border-2 w-full p-2 input input-bordered input-md w-full max-w-xs' type="text" name='quantity' placeholder='quantity' required></input>
                 <br></br>
                 <br></br>
-                <input className='border-2 w-full p-4' type="text" name='description' placeholder='description' required></input>
+                <input className='border-2 w-full p-4 input input-bordered input-md w-full max-w-xs' type="text" name='description' placeholder='description' required></input>
                 <br></br>
                 <br></br>
-                <input className='border-2 w-full p-2' type="text" name='image' placeholder='image url' required></input>
+                <input className='border-2 w-full p-2 input input-bordered input-md w-full max-w-xs' type="text" name='image' placeholder='image url' required></input>
                 <br></br>
                 <br></br>
-                <input className='border-2 font-bold p-3 w-full hover:bg-black-400 hover:text-white-400' type='submit' value='Add items'></input>
+                <input className='border-2 font-bold p-3 rounded-xl w-full max-w-xs hover:bg-blue-400 hover:text-white' type='submit' value='Add items'></input>
             </form>
         </div>
     );
